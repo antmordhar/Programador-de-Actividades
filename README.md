@@ -4,5 +4,7 @@ Backend que permite almacenar actividades (con un tiempo u hora, estado, o inscr
 Este proyecto se desarrollará en **Python** para el [curso de desarrollo para QA](https://jj.github.io/curso-tdd)
 
 Autores:
+
 [Antonio Morales de Haro](https://github.com/antmordhar)
+
 [Irene Béjar Maldonado](https://github.com/ibe16)
