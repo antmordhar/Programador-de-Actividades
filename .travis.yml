@@ -3,7 +3,6 @@ python:
   - "3.8"
 install:
   - pip install -r requirements.txt
-before script: 
-  -cd src
 script:
+  - cd src
   - python -m unittest TestActividad
