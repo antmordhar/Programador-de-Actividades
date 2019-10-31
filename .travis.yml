@@ -1,3 +1,9 @@
-language: minimal
-
-script: /bin/true
+language: python
+python:
+  - "3.8"
+install:
+  - pip install -r requirements.txt
+before script: 
+  -cd src
+script:
+  - python -m unittest TestActividad
