@@ -1,4 +1,5 @@
 class Actividad:
+
     def __init__(self, nombre,descripcion,fecha):
         self.nombre=nombre
         self.descripcion=descripcion
