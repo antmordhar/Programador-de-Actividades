@@ -1,3 +1,4 @@
+#clase que almacena una lista de actividades
 class ListaActividades: 
    
    def __init__(self):
