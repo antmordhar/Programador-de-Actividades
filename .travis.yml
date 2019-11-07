@@ -3,7 +3,8 @@ python:
   - "3.8"
 install:
   - pip install -r requirements.txt
+  - pip install codecov
 script:
-  - python -m unittest discover -s ./src -p "Test*.py" --cov-report term --cov=app/test/
+  - coverage python -m unittest discover -s ./src -p "Test*.py"
 after_success:
   - codecov
