@@ -1,23 +1,26 @@
+import json
+
+
 class Actividad:
 
-    def __init__(self, nombre,descripcion,fecha):
-        self.nombre=nombre
-        self.descripcion=descripcion
-        self.fecha=fecha
-        self.activa=True
+    def __init__(self, nombre, descripcion, fecha):
+        self.nombre = nombre
+        self.descripcion = descripcion
+        self.fecha = fecha
+        self.activa = True
 
     def cerrar_actividad(self):
-        if self.activa==True:
-            self.activa=False
-    
-    def cambiar_descripcion(self,new_descripcion):
-        self.descripcion=new_descripcion
-    
-    def cambiar_nombre(self,new_nombre):
-        self.nombre=new_nombre
+        if self.activa == True:
+            self.activa = False
 
-    def cambiar_fecha(self,new_fecha):
-        self.fecha=new_fecha
+    def cambiar_descripcion(self, new_descripcion):
+        self.descripcion = new_descripcion
+    
+    def cambiar_nombre(self, new_nombre):
+        self.nombre = new_nombre
+
+    def cambiar_fecha(self, new_fecha):
+        self.fecha = new_fecha
     
     def get_nombre(self): 
         return self.nombre
@@ -30,5 +33,15 @@ class Actividad:
     
     def get_estado(self):
         return self.activa
+
+    def to_dict(self):
+        dict = {}
+        dict["descripcion"] = self.descripcion
+        dict["fecha"] = self.fecha
+        dict["activa"] = self.activa
+
+        return dict
+
+
 
     
