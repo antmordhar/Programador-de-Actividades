@@ -1,7 +1,20 @@
 language: python
-python:
+python: #versiones de Python que se van a testear
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.6.8" 
+  - "3.7"
   - "3.8"
-install:
+  - "3.8-dev"
+
+install: #instalamos dependencias
   - pip install -r requirements.txt
-script:
-  - python -m unittest discover -s ./src -p "Test*.py"
+  - pip install codecov #instalamos codecov para mandar los test de cobertura
+
+script: 
+  - invoke test #ejecutamos los test unitarios
+  - invoke coverage
+
+after_success:
+  - codecov
