@@ -1,7 +1,5 @@
 language: python
 python: #versiones de Python que se van a testear
-  - "3.4"
-  - "3.5"
   - "3.6"
   - "3.6.8" 
   - "3.7"
