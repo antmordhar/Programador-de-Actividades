@@ -15,4 +15,5 @@ script:
   - invoke coverage
 
 after_success:
+  - cd tests
   - codecov
